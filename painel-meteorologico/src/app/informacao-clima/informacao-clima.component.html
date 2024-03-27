@@ -1,0 +1,8 @@
+<div class="informacao-clima" *ngIf="dadosClima">
+    <h2>Previsão do Tempo para {{ dadosClima.name }}, {{ dadosClima.sys.country }}</h2>
+    <p>Descrição: {{ dadosClima.weather[0].description }}</p>
+    <p>Temperatura: {{ dadosClima.main.temp }}°C</p>
+    <p>Temp. Mínima: {{ dadosClima.main.temp_min }}°C</p>
+    <p>Temp. Máxima: {{ dadosClima.main.temp_max }}°C</p>
+    <p>Pressão: {{ dadosClima.main.pressure }} hPa</p>
+</div>

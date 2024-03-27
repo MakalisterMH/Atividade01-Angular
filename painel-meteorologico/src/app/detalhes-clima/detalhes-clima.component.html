@@ -1,0 +1,6 @@
+<div class="detalhes-clima" *ngIf="dadosClima">
+    <h2>Detalhe</h2>
+    <p>Umidade: {{ dadosClima.main.humidity }}%</p>
+    <p>Nuvens: {{ dadosClima.clouds.all }}%</p>
+    <p>Velocidade do Vento: {{ dadosClima.wind.speed }} m/s</p>
+</div>

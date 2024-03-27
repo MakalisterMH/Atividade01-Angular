@@ -1,0 +1,20 @@
+<div class="container">
+    <h1 style="color: #000000;;">Atividade Professor Rafael API Clima / Tempo</h1>
+    <form (ngSubmit)="buscarClima()">
+      <label for="cidade">Selecione a cidade:</label>
+      <select id="cidade" name="cidade" [(ngModel)]="nomeCidade">
+        <option value="Goiânia">Goiânia</option>
+        <option value="São Paulo">São Paulo</option>
+        <!-- Outras cidades podem ser adicionadas aqui -->
+      </select>
+      <button type="submit">Buscar Clima</button>
+    </form>
+
+    <div *ngIf="dadosClima">
+      <app-informacao-clima [dadosClima]="dadosClima"></app-informacao-clima>
+      <button (click)="mostrarDetalhe()">Detalhes</button>
+      <app-detalhes-clima *ngIf="mostrarDetalhes" [dadosClima]="dadosClima"></app-detalhes-clima>
+    </div>
+    
+  </div>
+  
